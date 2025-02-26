@@ -1,8 +1,5 @@
 package selection_sort;
 
-import java.util.Arrays;
-import java.util.Random;
-
 /**
  * The selection sort algorithm sorts an array by repeatedly
  * finding the minimum element (considering ascending order)
@@ -18,21 +15,8 @@ import java.util.Random;
  * Auxiliary Space: O(1)
  */
 public class SelectionSort {
-    public static void main(String[] args) {
-        int [] numbers = new int[100000];
-        Random random = new Random();
-        for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = random.nextInt(100000);
-        }
-        System.out.println("Numbers before sorting: " + Arrays.toString(numbers));
-        long startTime = System.currentTimeMillis();
-        selectionSort(numbers);
-        long endTime = System.currentTimeMillis();
-        System.out.println(" Numbers after sorting: " + Arrays.toString(numbers));
-        System.out.println("Time took: " + (endTime - startTime));
-    }
 
-    private static void selectionSort(int[] numbers) {
+    public static void selectionSort(int[] numbers) {
         int length = numbers.length;
 
         for(int i = 0; i < length - 1; i++) {
